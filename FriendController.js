@@ -448,8 +448,7 @@ app.controller('mainCtrl', function($scope) {
     }
 ]
 
-  $scope.nameSearch = "";
-  $scope.locationSearch = "";
+
 
 
 
