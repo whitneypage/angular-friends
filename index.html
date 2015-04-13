@@ -38,9 +38,9 @@
         <option value="current_location.state">State</option>
         <option value="current_location.country">Country</option>
     </select>
-    <select class="input-medium">
-        <option name: "order" value= "reverse">Descending</option>
-        <option name: "order" value="true">Ascending</option>
+    <select class="input-medium" ng-model= "orderIn">
+        <option value= "true">Descending</option>
+        <option value="false">Ascending</option>
     </select>
   </div>
 </form>
@@ -48,7 +48,7 @@
 
 
   <ul>
-    <li class='friend' ng-repeat="friend in friends | filter: search | orderBy: orderByKey : order">
+    <li class='friend' ng-repeat="friend in friends | filter: search | orderBy: orderByKey : orderIn">
        <img class="profile-pic" src= "{{ friend.pic_square }}">
       <h3>{{ friend.name }}</h3>
       <div class="location">
