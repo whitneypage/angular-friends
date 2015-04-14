@@ -50,17 +50,17 @@
   <ul>
     <li class='friend' ng-repeat="friend in friends | filter: search | orderBy: orderByKey : orderIn">
        <img class="profile-pic" src= "{{ friend.pic_square }}">
-      <h3>{{ friend.name }}</h3>
-      <div class="location">
-        {{ friend.current_location.city + " , " + friend.current_location.state}} </br> {{ friend.current_location.country }}
+      <h3>{{friend.name}}</h3>
+      <div class="location" >
+        {{friend.current_location.name}} </br> {{friend.current_location.country}}
       </div>      
       <div class="status">
-       {{ friend.status.message }} 
+       Status: {{friend.status.message}} 
       </div>
       <div class="num-friends">
-       Friends: {{ friend.friend_count }}
+       Friends: {{friend.friend_count}}
       </div>
-    </li>
+    </li
   </ul>
 </div>
 
