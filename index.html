@@ -31,7 +31,7 @@
     <input class="form-control" placeholder="Search Your Friends' Name" ng-model="search.name" >
     <input class="form-control" placeholder="Search Your Friends' Location" ng-model= "search.current_location"> 
 
-    <select class="input-medium" ng-model="orderByKey">
+    <select class="input-medium" ng-model="orderByKey" >
         <option value="name">Name</option>
         <option value="friend_count"># friends</option>
         <option value="current_location.city">City</option>
@@ -49,7 +49,7 @@
 
   <ul>
     <li class='friend' ng-repeat="friend in friends | filter: search | orderBy: orderByKey : orderIn">
-       <img class="profile-pic" src= "{{ friend.pic_square }}">
+       <img class="profile-pic" ng-src= "{{friend.pic_square}}">
       <h3>{{friend.name}}</h3>
       <div class="location" >
         {{friend.current_location.name}} </br> {{friend.current_location.country}}

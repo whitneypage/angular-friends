@@ -1,0 +1,10 @@
+$scope.filterOptions = [
+  { value: "name", label: "Name"},
+  { value: "friend_count", label: "# Friends"},
+  { value: "current_location.city", label: "City"},
+  { value: "current_location.state", label: "State"},
+  { value: "current_location.country", label: "Country"}
+
+]
+
+ng-options = "option.value as option.label for option in filterOptions"
